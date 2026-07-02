@@ -11,3 +11,5 @@ if (process.env.NODE_ENV === "development") {
 }
 
 export default nextConfig;
+
+import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
