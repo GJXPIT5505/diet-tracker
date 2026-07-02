@@ -1,0 +1,14 @@
+name = "diet-tracker"
+compatibility_date = "2024-03-20"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "diet-tracker-db"
+database_id = "xxx-xxx-xxx"
+migrations_dir = "drizzle"
+
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "diet-tracker-bucket"
