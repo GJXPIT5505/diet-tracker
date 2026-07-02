@@ -80,7 +80,7 @@ export default function OnboardingPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label>Jenis Kelamin</Label>
-                  <Select value={formData.gender} onValueChange={(v) => setFormData({...formData, gender: v})}>
+                  <Select value={formData.gender} onValueChange={(v) => setFormData({...formData, gender: String(v)})}>
                     <SelectTrigger><SelectValue placeholder="Pilih..." /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="male">Laki-laki</SelectItem>
@@ -107,22 +107,22 @@ export default function OnboardingPage() {
               
               <div className="space-y-2">
                 <Label>Aktivitas Fisik</Label>
-                <Select value={formData.activity} onValueChange={(v) => setFormData({...formData, activity: v})}>
+                <Select value={formData.activity} onValueChange={(v) => setFormData({...formData, activity: String(v)})}>
                   <SelectTrigger><SelectValue placeholder="Pilih tingkat aktivitas..." /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="sedentary">Sangat jarang olahraga (Duduk saja)</SelectItem>
-                    <SelectItem value="light">Ringan (Olahraga 1-3 hari/minggu)</SelectItem>
-                    <SelectItem value="moderate">Sedang (Olahraga 3-5 hari/minggu)</SelectItem>
-                    <SelectItem value="active">Aktif (Olahraga keras 6-7 hari/minggu)</SelectItem>
-                    <SelectItem value="very_active">Sangat Aktif (Atlet/Pekerjaan fisik berat)</SelectItem>
+                    <SelectItem value="sedentary">Jarang Olahraga (Sedentary)</SelectItem>
+                    <SelectItem value="light">Ringan (1-3 kali/minggu)</SelectItem>
+                    <SelectItem value="moderate">Sedang (3-5 kali/minggu)</SelectItem>
+                    <SelectItem value="active">Aktif (6-7 kali/minggu)</SelectItem>
+                    <SelectItem value="very_active">Sangat Aktif (2x sehari)</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
               
               <div className="space-y-2">
-                <Label>Tujuan Diet</Label>
-                <Select value={formData.goal} onValueChange={(v) => setFormData({...formData, goal: v})}>
-                  <SelectTrigger><SelectValue placeholder="Apa tujuan Anda?" /></SelectTrigger>
+                <Label>Target Diet</Label>
+                <Select value={formData.goal} onValueChange={(v) => setFormData({...formData, goal: String(v)})}>
+                  <SelectTrigger><SelectValue placeholder="Pilih target..." /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="lose_weight">Menurunkan Berat Badan (-500 kkal)</SelectItem>
                     <SelectItem value="maintain">Menjaga Berat Badan</SelectItem>
