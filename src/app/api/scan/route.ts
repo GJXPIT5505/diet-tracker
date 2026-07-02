@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { verifyToken } from "@/lib/auth";
 import { estimateCaloriesFromImage } from "@/lib/gemini";
 
+export const runtime = "edge";
+
 export async function POST(req: NextRequest) {
   try {
     const token = req.cookies.get("auth_token")?.value;
