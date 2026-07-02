@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 
 export const runtime = "edge";
 
-export async function POST(req: NextRequest, { params }: { params: { action: string } }) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ action: string }> }) {
   const { action } = await params;
   
   if (action === "login") {
