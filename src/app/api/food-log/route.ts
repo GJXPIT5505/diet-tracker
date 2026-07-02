@@ -4,8 +4,6 @@ import { db } from "@/db";
 import { foodLogs } from "@/db/schema";
 import { eq, desc, gte, lte, and } from "drizzle-orm";
 
-export const runtime = "edge";
-
 export async function GET(req: NextRequest) {
   try {
     const token = req.cookies.get("auth_token")?.value;
